@@ -36,7 +36,7 @@
 
       <legend>Bugs and issues</legend>
 
-      <p>If you find something is not working as expected, please don't hesitate and contact me. Either use SeAT-Slack or submit an <a href="https://github.com/herpaderpaldent/seat-discourse/issues/new">issue on Github</a></p>
+      <p>If you find something is not working as expected, please don't hesitate and contact me. Either use SeAT-Slack or submit an <a href="https://github.com/Goemktg/seat-discourse/issues/new">issue on Github</a></p>
 
     </div>
   </div>
@@ -57,8 +57,8 @@
         </div>
         <div class="col-md-6">
           Latest version:
-          <a href="https://packagist.org/packages/herpaderpaldent/seat-discourse">
-            <img src="https://poser.pugx.org/herpaderpaldent/seat-discourse/v/stable" alt="SeAT Discourse version" />
+          <a href="https://packagist.org/packages/goemktg/seat-discourse">
+            <img src="https://poser.pugx.org/goemktg/seat-discourse/v/stable" alt="SeAT Discourse version" />
           </a>
         </div>
       </div>

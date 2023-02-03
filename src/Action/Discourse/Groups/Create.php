@@ -6,11 +6,11 @@
  * Time: 16:01.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups;
+namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Herpaderpaldent\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
+use Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 
 class Create
 {
@@ -18,7 +18,7 @@ class Create
      * @param string $groupname
      *
      * @return string
-     * @throws \Herpaderpaldent\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException
+     * @throws \Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException
      */
     public function execute(string $groupname): string
     {

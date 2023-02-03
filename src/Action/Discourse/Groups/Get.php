@@ -6,19 +6,19 @@
  * Time: 13:13.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups;
+namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Herpaderpaldent\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
+use Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 use Illuminate\Support\Collection;
 
 class Get
 {
     /**
      * @return \Illuminate\Support\Collection
-     * @throws \Herpaderpaldent\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException
+     * @throws \Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException
      */
     public function execute(): Collection
     {

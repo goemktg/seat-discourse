@@ -6,7 +6,7 @@
  * Time: 21:51.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Users;
+namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Users;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;

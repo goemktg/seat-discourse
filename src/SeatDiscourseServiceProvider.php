@@ -1,9 +1,9 @@
 <?php
 
-namespace Herpaderpaldent\Seat\SeatDiscourse;
+namespace Goemktg\Seat\SeatDiscourse;
 
-use Herpaderpaldent\Seat\SeatDiscourse\Commands\SyncRolesWithDiscourse;
-use Herpaderpaldent\Seat\SeatDiscourse\Observers\RefreshTokenObserver;
+use Goemktg\Seat\SeatDiscourse\Commands\SyncRolesWithDiscourse;
+use Goemktg\Seat\SeatDiscourse\Observers\RefreshTokenObserver;
 use Illuminate\Support\ServiceProvider;
 use Seat\Eveapi\Models\RefreshToken;
 

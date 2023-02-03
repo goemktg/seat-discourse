@@ -1,5 +1,5 @@
 {
-    "name": "herpaderpaldent/seat-discourse",
+    "name": "goemktg/seat-discourse",
     "description": "Integrate Discourse SSO and API into SeAT.",
     "keywords": [
         "discourse",
@@ -13,8 +13,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Felix Huber",
-            "email": "huberfel@students.zhaw.ch"
+            "name": "Goem Funaila",
+            "email": "samktg52@gmail.com"
         }
     ],
     "require": {
@@ -27,13 +27,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Herpaderpaldent\\Seat\\SeatDiscourse\\": "src/"
+            "Goemktg\\Seat\\SeatDiscourse\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Herpaderpaldent\\Seat\\SeatDiscourse\\SeatDiscourseServiceProvider"
+                "Goemktg\\Seat\\SeatDiscourse\\SeatDiscourseServiceProvider"
             ]
         }
     },

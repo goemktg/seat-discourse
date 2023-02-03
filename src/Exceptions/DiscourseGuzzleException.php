@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Exceptions;
+namespace Goemktg\Seat\SeatDiscourse\Exceptions;
 
 use Exception;
 use Throwable;

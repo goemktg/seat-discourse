@@ -6,7 +6,7 @@
  * Time: 22:14.
  */
 Route::group([
-    'namespace' => 'Herpaderpaldent\Seat\SeatDiscourse\Http\Controllers',
+    'namespace' => 'Goemktg\Seat\SeatDiscourse\Http\Controllers',
 ], function () {
     Route::group([
         'middleware' => ['web', 'auth'],

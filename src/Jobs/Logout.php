@@ -6,10 +6,10 @@
  * Time: 23:22.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Jobs;
+namespace Goemktg\Seat\SeatDiscourse\Jobs;
 
 use GuzzleHttp\Client;
-use Herpaderpaldent\Seat\SeatDiscourse\Exceptions\MissingMainCharacterException;
+use Goemktg\Seat\SeatDiscourse\Exceptions\MissingMainCharacterException;
 use Illuminate\Support\Facades\Redis;
 use Seat\Web\Models\Group;
 

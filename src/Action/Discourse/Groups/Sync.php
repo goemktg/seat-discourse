@@ -6,7 +6,7 @@
  * Time: 10:48.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups;
+namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use Seat\Web\Models\Acl\Role;
 

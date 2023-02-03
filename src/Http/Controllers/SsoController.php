@@ -1,9 +1,9 @@
 <?php
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Http\Controllers;
+namespace Goemktg\Seat\SeatDiscourse\Http\Controllers;
 
 use Cviebrock\DiscoursePHP\SSOHelper;
-use Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups\Sync;
+use Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Sync;
 use Illuminate\Contracts\Auth\Authenticatable as User;
 use Illuminate\Contracts\Config\Repository as Config;
 use Illuminate\Http\Request;
@@ -161,7 +161,7 @@ class SsoController extends Controller
      *
      * @param Request                                                          $request
      *
-     * @param \Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups\Sync $sync
+     * @param \Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Sync $sync
      *
      * @return mixed
      * @throws \Cviebrock\DiscoursePHP\Exception\PayloadException

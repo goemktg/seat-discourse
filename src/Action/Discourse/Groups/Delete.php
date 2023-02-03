@@ -6,11 +6,11 @@
  * Time: 18:44.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups;
+namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Herpaderpaldent\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
+use Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 
 class Delete
 {

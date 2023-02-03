@@ -6,7 +6,7 @@
  * Time: 18:56.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups;
+namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use Exception;
 use Illuminate\Support\Collection;

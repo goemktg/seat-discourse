@@ -6,7 +6,7 @@
  * Time: 20:57.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Events;
+namespace Goemktg\Seat\SeatDiscourse\Events;
 
 use Illuminate\Auth\Events\Registered as RegisterEvent;
 use richp10\discourseAPI\DiscourseAPI;

@@ -6,7 +6,7 @@
  * Time: 10:51.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\SeatDiscourse;
+namespace Goemktg\Seat\SeatDiscourse\Action\SeatDiscourse;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
@@ -18,7 +18,7 @@ class GetChangelog
     {
         try {
             $response = (new Client())
-                ->request('GET', 'https://raw.githubusercontent.com/herpaderpaldent/seat-discourse/master/CHANGELOG.md');
+                ->request('GET', 'https://raw.githubusercontent.com/goemktg/seat-discourse/master/CHANGELOG.md');
             if ($response->getStatusCode() != 200) {
                 return 'Error while fetching changelog';
             }
