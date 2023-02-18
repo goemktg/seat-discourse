@@ -24,11 +24,13 @@ class Get
     {
         $client = new Client();
         try {
-            $response = $client->request('GET', getenv('DISCOURSE_URL') . '/groups/search.json', [
+            $response = $client->request('GET', getenv('DISCOURSE_URL').'/groups/search.json', [
                 'headers' => [
                     'api-key' => getenv('DISCOURSE_API_KEY'),
                     'api-username' => getenv('DISCOURSE_API_USERNAME'),
                 ],
+                //'debug' => true,
+                'decode_content' => false
             ]);
 
             if(! $response->getStatusCode() === 200)

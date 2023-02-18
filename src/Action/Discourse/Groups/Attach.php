@@ -10,6 +10,7 @@ namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use Exception;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class Attach
 {
@@ -20,16 +21,16 @@ class Attach
         $this->create = $create;
     }
 
-    public function execute(Collection $roles, Collection $groups)
+    public function execute(Collection $squads, Collection $groups)
     {
         try{
             $feedback = collect();
 
             $groupnames_array = $groups->map(function ($group) {return $group->name; })->toArray();
 
-            $roles->each(function ($role) use ($feedback, $groupnames_array) {
-                if(! in_array(studly_case($role->title), $groupnames_array)){
-                    $feedback->push($this->create->execute(studly_case($role->title)));
+            $squads->each(function ($squad) use ($feedback, $groupnames_array) {
+                if(! in_array(str::studly($squad->name), $groupnames_array)){
+                    $feedback->push($this->create->execute(str::studly($squad->name)));
                 }
             });
 

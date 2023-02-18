@@ -10,6 +10,7 @@ namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use Exception;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class Detach
 {
@@ -20,12 +21,12 @@ class Detach
         $this->delete = $delete;
     }
 
-    public function execute(Collection $roles, Collection $groups)
+    public function execute(Collection $squads, Collection $groups)
     {
         try{
-            $rolenames_array = $roles->map(function ($role) {return studly_case($role->title); })->toArray();
+            $rolenames_array = $squads->map(function ($squad) {return str::studly($squad->name); })->toArray();
 
-            //Group minus Roles, what is left should be deleted
+            //Group minus squads, what is left should be deleted
             $groups_deleted = collect();
             $groups->each(function ($group) use ($rolenames_array,$groups_deleted) {
                 if(! in_array($group->name, $rolenames_array)){

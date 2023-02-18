@@ -15,11 +15,11 @@
 
         <legend>Thank you</legend>
 
-        <p>Since SeAT 3.0 beta has launched SeAT Discourse has been downloaded almost 126 times. I am very content that my package is being used and supports you and your members.</p>
+        <p>This is updated fork of <a href="https://github.com/herpaderpaldent/seat-discourse">herpaderpaldent/seat-discourse</a> It is somewhat deprecated and archived since SeAT 4.0.</p>
 
-        <p>As you might know, <code>SeAT</code>, <code>SeAT-Groups</code> and <code>SeAT-Discourse</code> are OpenSource Projects which are available free of charge. However, programming takes up a lot of time which keeps me away from the game.</p>
+        <p>This is originally created by <a href="https://evewho.com/pilot/Herpaderp%20Aldent/"> {!! img('characters', 'portrait', 95725047, 64, ['class' => 'img-circle eve-icon small-icon']) !!} Herpaderp Aldent</a></p>
 
-        <p>If you like <code>SeAT-Discourse</code>, i highly appreciate ISK Donations to <a href="https://evewho.com/pilot/Herpaderp%20Aldent/"> {!! img('character', 95725047, 64, ['class' => 'img-circle eve-icon small-icon']) !!} Herpaderp Aldent</a></p>
+        <p>If you like <code>SeAT-Discourse</code>, i highly appreciate ISK Donations to original creater.</p>
 
         </div>
     </div>
@@ -36,7 +36,7 @@
 
       <legend>Bugs and issues</legend>
 
-      <p>If you find something is not working as expected, please don't hesitate and contact me. Either use SeAT-Slack or submit an <a href="https://github.com/Goemktg/seat-discourse/issues/new">issue on Github</a></p>
+      <p>If you find something is not working as expected, please don't hesitate and submit an <a href="https://github.com/Goemktg/seat-discourse/issues/new">issue on Github</a></p>
 
     </div>
   </div>
@@ -52,9 +52,6 @@
     </div>
     <div class="panel-footer">
       <div class="row">
-        <div class="col-md-6">
-          Installed version: <b>{{ config('seatdiscourse.config.version') }}</b>
-        </div>
         <div class="col-md-6">
           Latest version:
           <a href="https://packagist.org/packages/goemktg/seat-discourse">

@@ -29,6 +29,8 @@ class Delete
                     'api-key'      => getenv('DISCOURSE_API_KEY'),
                     'api-username' => getenv('DISCOURSE_API_USERNAME'),
                 ],
+                
+                'decode_content' => false
             ]);
 
             if (200 === $response->getStatusCode()) {
