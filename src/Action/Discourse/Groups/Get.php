@@ -9,28 +9,29 @@
 namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use Exception;
+use Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 use Illuminate\Support\Collection;
 
 class Get
 {
     /**
      * @return \Illuminate\Support\Collection
+     *
      * @throws \Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException
      */
     public function execute(): Collection
     {
         $client = new Client();
         try {
-            $response = $client->request('GET', getenv('DISCOURSE_URL').'/groups/search.json', [
+            $response = $client->request('GET', getenv('DISCOURSE_URL') . '/groups/search.json', [
                 'headers' => [
                     'api-key' => getenv('DISCOURSE_API_KEY'),
                     'api-username' => getenv('DISCOURSE_API_USERNAME'),
                 ],
                 //'debug' => true,
-                'decode_content' => false
+                'decode_content' => false,
             ]);
 
             if(! $response->getStatusCode() === 200)

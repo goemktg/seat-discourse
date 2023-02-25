@@ -8,16 +8,16 @@
 
 namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
+use Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 
 class Create
 {
     /**
-     * @param string $groupname
-     *
+     * @param  string  $groupname
      * @return string
+     *
      * @throws \Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException
      */
     public function execute(string $groupname): string
@@ -32,8 +32,8 @@ class Create
                     'api-key' => getenv('DISCOURSE_API_KEY'),
                     'api-username' => getenv('DISCOURSE_API_USERNAME'),
                 ],
-                
-                'decode_content' => false
+
+                'decode_content' => false,
             ]);
 
             if (200 === $response->getStatusCode()) {

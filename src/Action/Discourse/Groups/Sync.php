@@ -8,8 +8,8 @@
 
 namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
-use Seat\Web\Models\Squads\Squad;
 use Illuminate\Support\Str;
+use Seat\Web\Models\Squads\Squad;
 
 class Sync
 {

@@ -9,7 +9,6 @@
 namespace Goemktg\Seat\SeatDiscourse\Events;
 
 use Illuminate\Auth\Events\Registered as RegisterEvent;
-use richp10\discourseAPI\DiscourseAPI;
 
 require_once DiscourseAPI;
 
