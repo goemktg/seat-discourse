@@ -9,7 +9,8 @@ class MissingMainCharacterException extends Exception
 {
     /**
      * MissingMainCharacterException constructor.
-     * @param \Seat\Web\Models\Group $group
+     *
+     * @param  \Seat\Web\Models\Group  $group
      */
     public function __construct(Group $group)
     {

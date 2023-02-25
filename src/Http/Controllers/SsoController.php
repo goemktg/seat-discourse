@@ -3,11 +3,12 @@
 namespace Goemktg\Seat\SeatDiscourse\Http\Controllers;
 
 use Cviebrock\DiscoursePHP\SSOHelper;
-use Seat\Web\Http\Controllers\Controller;
-use Seat\Web\Models\Squads\Squad;
 use Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Sync;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Seat\Web\Http\Controllers\Controller;
+use Seat\Web\Models\Squads\Squad;
+
 //use Illumdinate\Contracts\Auth\Authenticatable as User;
 //use Illuminate\Contracts\Config\Repository as Config;
 //use Illuminate\Routing\Controller;
@@ -52,7 +53,7 @@ class SsoController extends Controller
     /**
      * SsoController constructor.
      *
-     * @param SSOHelper $sso
+     * @param  SSOHelper  $sso
      */
     public function __construct(SSOHelper $sso)
     {
@@ -125,7 +126,6 @@ class SsoController extends Controller
      * "false" or "true", so convert any boolean property to the string version.
      *
      * @param $property
-     *
      * @return string
      */
     public function castBooleansToString($property)
@@ -140,11 +140,10 @@ class SsoController extends Controller
     /**
      * Process the SSO login request from Discourse.
      *
-     * @param Request                                                          $request
-     *
-     * @param \Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Sync $sync
-     *
+     * @param  Request  $request
+     * @param  \Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Sync  $sync
      * @return mixed
+     *
      * @throws \Cviebrock\DiscoursePHP\Exception\PayloadException
      */
     public function login(Request $request, Sync $sync)
@@ -187,7 +186,7 @@ class SsoController extends Controller
     /**
      * Check to see if property is null.
      *
-     * @param string $property
+     * @param  string  $property
      * @return bool
      */
     public function nullProperty($property)
@@ -200,7 +199,7 @@ class SsoController extends Controller
      *
      * If a string is passed in, then get it from the user object, otherwise, return what was given
      *
-     * @param string $property
+     * @param  string  $property
      * @return mixed
      */
     public function parseUserValue($property)

@@ -4,6 +4,7 @@ namespace Goemktg\Seat\SeatDiscourse;
 
 use Goemktg\Seat\SeatDiscourse\Commands\SyncRolesWithDiscourse;
 use Seat\Services\AbstractSeatPlugin;
+
 //use Goemktg\Seat\SeatDiscourse\Observers\RefreshTokenObserver;
 //use Seat\Eveapi\Models\RefreshToken;
 
@@ -55,7 +56,7 @@ class SeatDiscourseServiceProvider extends AbstractSeatPlugin
         }
     }
 
-     /**
+    /**
      * Return the plugin public name as it should be displayed into settings.
      *
      * @example SeAT Web
@@ -66,7 +67,7 @@ class SeatDiscourseServiceProvider extends AbstractSeatPlugin
     {
         return 'SeAT-Discourse';
     }
-    
+
     /**
      * Return the plugin repository address.
      *
@@ -90,7 +91,7 @@ class SeatDiscourseServiceProvider extends AbstractSeatPlugin
     {
         return 'seat-discourse';
     }
-    
+
     /**
      * Return the plugin vendor tag as published on package manager.
      *

@@ -28,7 +28,7 @@ class Detach
 
             //Group minus squads, what is left should be deleted
             $groups_deleted = collect();
-            $groups->each(function ($group) use ($rolenames_array,$groups_deleted) {
+            $groups->each(function ($group) use ($rolenames_array, $groups_deleted) {
                 if(! in_array($group->name, $rolenames_array)){
                     $groups_deleted->push($group->name);
                     $this->delete->execute($group->id);
