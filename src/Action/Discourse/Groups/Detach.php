@@ -21,14 +21,14 @@ class Detach
         $this->delete = $delete;
     }
 
-    public function execute(Collection $squads, Collection $groups)
+    public function execute(Collection $role_collection, Collection $group_collection)
     {
         try{
-            $rolenames_array = $squads->map(function ($squad) {return str::studly($squad->name); })->toArray();
+            $rolenames_array = $role_collection->map(function ($role) {return str::studly($role->title); })->toArray();
 
             //Group minus squads, what is left should be deleted
             $groups_deleted = collect();
-            $groups->each(function ($group) use ($rolenames_array, $groups_deleted) {
+            $group_collection->each(function ($group) use ($rolenames_array, $groups_deleted) {
                 if(! in_array($group->name, $rolenames_array)){
                     $groups_deleted->push($group->name);
                     $this->delete->execute($group->id);

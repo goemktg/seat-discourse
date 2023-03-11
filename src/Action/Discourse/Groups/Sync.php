@@ -9,7 +9,7 @@
 namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use Illuminate\Support\Str;
-use Seat\Web\Models\Squads\Squad;
+use Seat\Web\Models\Acl\Role;
 
 class Sync
 {
@@ -26,18 +26,18 @@ class Sync
 
     public function execute()
     {
-        $squads = Squad::all();
+        $roles = Role::all();
         $groups = $this->get->execute();
 
         $feedback = collect();
 
-        if($squads->map(function ($squad) {return $squad->name; })->diff($groups->map(function ($group) {return $group->name; }))->isNotEmpty())
+        if($roles->map(function ($role) {return $role->title; })->diff($groups->map(function ($group) {return $group->name; }))->isNotEmpty())
         {
-            $feedback->push($this->attach->execute($squads, $groups));
+            $feedback->push($this->attach->execute($roles, $groups));
         }
 
-        if($groups->map(function ($group) {return $group->name; })->diff($squads->map(function ($squad) {return str::studly($squad->name); }))->isNotEmpty()){
-            $feedback->push($this->detach->execute($squads, $groups));
+        if($groups->map(function ($group) {return $group->name; })->diff($roles->map(function ($role) {return str::studly($role->title); }))->isNotEmpty()){
+            $feedback->push($this->detach->execute($roles, $groups));
         }
 
         return $feedback;

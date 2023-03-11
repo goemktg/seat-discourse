@@ -21,16 +21,16 @@ class Attach
         $this->create = $create;
     }
 
-    public function execute(Collection $squads, Collection $groups)
+    public function execute(Collection $role_collection, Collection $group_collection)
     {
         try{
             $feedback = collect();
 
-            $groupnames_array = $groups->map(function ($group) {return $group->name; })->toArray();
+            $groupnames_array = $group_collection->map(function ($group) {return $group->name; })->toArray();
 
-            $squads->each(function ($squad) use ($feedback, $groupnames_array) {
-                if(! in_array(str::studly($squad->name), $groupnames_array)){
-                    $feedback->push($this->create->execute(str::studly($squad->name)));
+            $role_collection->each(function ($role) use ($feedback, $groupnames_array) {
+                if(! in_array(str::studly($role->title), $groupnames_array)){
+                    $feedback->push($this->create->execute(str::studly($role->title)));
                 }
             });
 
