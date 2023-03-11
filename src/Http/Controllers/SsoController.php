@@ -7,7 +7,7 @@ use Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Sync;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Seat\Web\Http\Controllers\Controller;
-use Seat\Web\Models\Squads\Squad;
+use Seat\Web\Models\Acl\Role;
 
 //use Illumdinate\Contracts\Auth\Authenticatable as User;
 //use Illuminate\Contracts\Config\Repository as Config;
@@ -79,8 +79,8 @@ class SsoController extends Controller
         return [
             // Groups to make sure that the user is part of in a comma-separated string
             // NOTE: Groups cannot have spaces in their names & must already exist in Discourse
-            'add_groups' => $this->user->squads->map(function ($squad) {
-                return str::studly($squad->name);
+            'add_groups' => $this->user->roles->map(function ($role) {
+                return str::studly($role->title);
             })->implode(','),
 
             // Boolean for user a Discourse admin, leave null to ignore
@@ -106,8 +106,8 @@ class SsoController extends Controller
             // NOTE: Groups cannot have spaces in their names & must already exist in Discourse
             // There is not a way to specify the exact list of groups that a user is in, so
             // you may want to send the inverse of the 'add_groups'
-            'remove_groups' => Squad::all()->diff($this->user->squads)->map(function ($squad) {
-                return str::studly($squad->name);
+            'remove_groups' => Role::all()->diff($this->user->roles)->map(function ($role) {
+                return str::studly($role->title);
             })->implode(','),
 
             // If the email has not been verified, set this to true
