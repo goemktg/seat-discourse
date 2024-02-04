@@ -1,5 +1,5 @@
 {
-    "name": "herpaderpaldent/seat-discourse",
+    "name": "goemktg/seat-discourse",
     "description": "Integrate Discourse SSO and API into SeAT.",
     "keywords": [
         "discourse",
@@ -13,29 +13,33 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Felix Huber",
-            "email": "huberfel@students.zhaw.ch"
+            "name": "Goem Funaila",
+            "email": "samktg52@gmail.com"
         }
     ],
     "require": {
-        "php": ">=7.1",
         "cviebrock/discourse-php": "^0.9.3",
-        "laravel/framework": "5.5.*",
-        "eveseat/web": "3.0.*",
+        "eveseat/services": "^4.1",
+        "eveseat/web": "^4.19.3",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.5"
     },
     "autoload": {
         "psr-4": {
-            "Herpaderpaldent\\Seat\\SeatDiscourse\\": "src/"
+            "Goemktg\\Seat\\SeatDiscourse\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Herpaderpaldent\\Seat\\SeatDiscourse\\SeatDiscourseServiceProvider"
+                "Goemktg\\Seat\\SeatDiscourse\\SeatDiscourseServiceProvider"
             ]
         }
     },
-    "minimum-stability": "alpha"
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
 }

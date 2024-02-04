@@ -1,6 +1,6 @@
 <?php
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Exceptions;
+namespace Goemktg\Seat\SeatDiscourse\Exceptions;
 
 use Exception;
 use Seat\Web\Models\Group;
@@ -9,7 +9,8 @@ class MissingMainCharacterException extends Exception
 {
     /**
      * MissingMainCharacterException constructor.
-     * @param \Seat\Web\Models\Group $group
+     *
+     * @param  \Seat\Web\Models\Group  $group
      */
     public function __construct(Group $group)
     {

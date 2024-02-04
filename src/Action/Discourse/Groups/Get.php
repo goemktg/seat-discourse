@@ -6,19 +6,20 @@
  * Time: 13:13.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups;
+namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use Exception;
+use Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Herpaderpaldent\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 use Illuminate\Support\Collection;
 
 class Get
 {
     /**
      * @return \Illuminate\Support\Collection
-     * @throws \Herpaderpaldent\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException
+     *
+     * @throws \Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException
      */
     public function execute(): Collection
     {
@@ -29,6 +30,8 @@ class Get
                     'api-key' => getenv('DISCOURSE_API_KEY'),
                     'api-username' => getenv('DISCOURSE_API_USERNAME'),
                 ],
+                //'debug' => true,
+                'decode_content' => false,
             ]);
 
             if(! $response->getStatusCode() === 200)

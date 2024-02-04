@@ -6,14 +6,14 @@
  * Time: 19:09.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Commands;
+namespace Goemktg\Seat\SeatDiscourse\Commands;
 
-use Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups\Attach;
-use Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups\Create;
-use Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups\Detach;
-use Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups\Get;
-use Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups\Sync;
-use Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Users\ListUsers;
+use Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Attach;
+use Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Create;
+use Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Detach;
+use Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Get;
+use Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups\Sync;
+use Goemktg\Seat\SeatDiscourse\Action\Discourse\Users\ListUsers;
 use Illuminate\Console\Command;
 use Seat\Web\Models\Acl\Role;
 use Seat\Web\Models\Group;

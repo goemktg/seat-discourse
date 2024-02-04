@@ -6,9 +6,9 @@
  * Time: 10:47.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Http\Controllers;
+namespace Goemktg\Seat\SeatDiscourse\Http\Controllers;
 
-use Herpaderpaldent\Seat\SeatDiscourse\Action\SeatDiscourse\GetChangelog;
+use Goemktg\Seat\SeatDiscourse\Action\SeatDiscourse\GetChangelog;
 use Seat\Web\Http\Controllers\Controller;
 
 class SeatDiscourseController extends Controller

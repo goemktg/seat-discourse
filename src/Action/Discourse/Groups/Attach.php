@@ -6,10 +6,11 @@
  * Time: 18:01.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups;
+namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
 use Exception;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class Attach
 {
@@ -20,16 +21,16 @@ class Attach
         $this->create = $create;
     }
 
-    public function execute(Collection $roles, Collection $groups)
+    public function execute(Collection $role_collection, Collection $group_collection)
     {
         try{
             $feedback = collect();
 
-            $groupnames_array = $groups->map(function ($group) {return $group->name; })->toArray();
+            $groupnames_array = $group_collection->map(function ($group) {return $group->name; })->toArray();
 
-            $roles->each(function ($role) use ($feedback, $groupnames_array) {
-                if(! in_array(studly_case($role->title), $groupnames_array)){
-                    $feedback->push($this->create->execute(studly_case($role->title)));
+            $role_collection->each(function ($role) use ($feedback, $groupnames_array) {
+                if(! in_array(str::studly($role->title), $groupnames_array)){
+                    $feedback->push($this->create->execute(str::studly($role->title)));
                 }
             });
 

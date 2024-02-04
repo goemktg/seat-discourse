@@ -1,9 +1,9 @@
-# Hepraderp Aldent's - SeAT Discourse
+# Hepraderp Aldent's - SeAT Discourse (resurrected)
 
-[![Latest Stable Version](https://poser.pugx.org/herpaderpaldent/seat-discourse/v/stable)](https://packagist.org/packages/herpaderpaldent/seat-discourse)
-[![Maintainability](https://api.codeclimate.com/v1/badges/591f996eb3a185ea4e42/maintainability)](https://codeclimate.com/github/herpaderpaldent/seat-discourse/maintainability)
-[![License](https://poser.pugx.org/herpaderpaldent/seat-discourse/license)](https://packagist.org/packages/herpaderpaldent/seat-discourse)
-[![Total Downloads](https://poser.pugx.org/herpaderpaldent/seat-discourse/downloads)](https://packagist.org/packages/herpaderpaldent/seat-discourse)
+[![Latest Stable Version](https://poser.pugx.org/goemktg/seat-discourse/v/stable)](https://packagist.org/packages/goemktg/seat-discourse)
+[![Maintainability](https://api.codeclimate.com/v1/badges/591f996eb3a185ea4e42/maintainability)](https://codeclimate.com/github/goemktg/seat-discourse/maintainability)
+[![License](https://poser.pugx.org/goemktg/seat-discourse/license)](https://packagist.org/packages/herpaderpaldent/seat-discourse)
+[![Total Downloads](https://poser.pugx.org/goemktg/seat-discourse/downloads)](https://packagist.org/packages/herpaderpaldent/seat-discourse)
 
 This SeAT-Package is based upon [SPINEN's Discourse SSO for Laravel](https://github.com/spinen/laravel-discourse-sso). 
 Extendend with custom actions to create groups.

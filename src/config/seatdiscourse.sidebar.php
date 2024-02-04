@@ -7,19 +7,19 @@
  */
 
 return [
-    'seatdiscorse' => [
+    'seat-discorse' => [
         'name' => 'SeAT Discourse',
-        'icon' => 'fa-comments-o',
+        'icon' => 'fas fa-comments',
         'route_segment' => 'sso',
         'entries' => [
             [
                 'name' => 'Forum',
-                'icon' => 'fa-commenting-o',
+                'icon' => 'fas fa-comment',
                 'route' => 'sso.forum',
             ],
             [
                 'name' => 'About',
-                'icon' => 'fa-info-circle',
+                'icon' => 'fas fa-info-circle',
                 'route' => 'seatdiscourse.about',
             ],
         ],

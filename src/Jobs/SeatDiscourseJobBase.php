@@ -6,7 +6,7 @@
  * Time: 23:16.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Jobs;
+namespace Goemktg\Seat\SeatDiscourse\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

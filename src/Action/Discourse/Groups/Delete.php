@@ -6,17 +6,16 @@
  * Time: 18:44.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups;
+namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
+use Goemktg\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Herpaderpaldent\Seat\SeatDiscourse\Exceptions\DiscourseGuzzleException;
 
 class Delete
 {
     /**
-     * @param int $group_id
-     *
+     * @param  int  $group_id
      * @return string
      */
     public function execute(int $group_id)
@@ -29,6 +28,8 @@ class Delete
                     'api-key'      => getenv('DISCOURSE_API_KEY'),
                     'api-username' => getenv('DISCOURSE_API_USERNAME'),
                 ],
+
+                'decode_content' => false,
             ]);
 
             if (200 === $response->getStatusCode()) {

@@ -6,9 +6,9 @@
  * Time: 15:34.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Seat\Groups;
+namespace Goemktg\Seat\SeatDiscourse\Action\Seat\Groups;
 
-use Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Users\ListUsers;
+use Goemktg\Seat\SeatDiscourse\Action\Discourse\Users\ListUsers;
 use Seat\Web\Models\Group;
 
 class Sync

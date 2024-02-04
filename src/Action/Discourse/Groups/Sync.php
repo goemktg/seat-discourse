@@ -6,8 +6,9 @@
  * Time: 10:48.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Action\Discourse\Groups;
+namespace Goemktg\Seat\SeatDiscourse\Action\Discourse\Groups;
 
+use Illuminate\Support\Str;
 use Seat\Web\Models\Acl\Role;
 
 class Sync
@@ -35,7 +36,7 @@ class Sync
             $feedback->push($this->attach->execute($roles, $groups));
         }
 
-        if($groups->map(function ($group) {return $group->name; })->diff($roles->map(function ($role) {return studly_case($role->title); }))->isNotEmpty()){
+        if($groups->map(function ($group) {return $group->name; })->diff($roles->map(function ($role) {return str::studly($role->title); }))->isNotEmpty()){
             $feedback->push($this->detach->execute($roles, $groups));
         }
 

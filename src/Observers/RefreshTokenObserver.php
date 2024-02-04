@@ -6,9 +6,9 @@
  * Time: 10:33.
  */
 
-namespace Herpaderpaldent\Seat\SeatDiscourse\Observers;
+namespace Goemktg\Seat\SeatDiscourse\Observers;
 
-use Herpaderpaldent\Seat\SeatDiscourse\Jobs\Logout;
+use Goemktg\Seat\SeatDiscourse\Jobs\Logout;
 use Seat\Eveapi\Models\RefreshToken;
 
 class RefreshTokenObserver
