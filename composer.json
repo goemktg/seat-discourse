@@ -19,8 +19,8 @@
     ],
     "require": {
         "cviebrock/discourse-php": "^0.9.3",
-        "eveseat/services": "^4.1",
-        "eveseat/web": "^4.19.3",
+        "eveseat/services": "^5.0.2",
+        "eveseat/web": "^5.0.4",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.5"
     },
