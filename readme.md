@@ -2,13 +2,14 @@
 
 [![Latest Stable Version](https://poser.pugx.org/goemktg/seat-discourse/v/stable)](https://packagist.org/packages/goemktg/seat-discourse)
 [![Maintainability](https://api.codeclimate.com/v1/badges/591f996eb3a185ea4e42/maintainability)](https://codeclimate.com/github/goemktg/seat-discourse/maintainability)
-[![License](https://poser.pugx.org/goemktg/seat-discourse/license)](https://packagist.org/packages/herpaderpaldent/seat-discourse)
-[![Total Downloads](https://poser.pugx.org/goemktg/seat-discourse/downloads)](https://packagist.org/packages/herpaderpaldent/seat-discourse)
+[![License](https://poser.pugx.org/goemktg/seat-discourse/license)](https://packagist.org/packages/goemktg/seat-discourse)
+[![Total Downloads](https://poser.pugx.org/goemktg/seat-discourse/downloads)](https://packagist.org/packages/goemktg/seat-discourse)
 
 This SeAT-Package is based upon [SPINEN's Discourse SSO for Laravel](https://github.com/spinen/laravel-discourse-sso). 
 Extendend with custom actions to create groups.
+resurrected by Goem Funaila
 
-## Documentation
+## Documentation (need to be fixed)
 
 [Documentation](https://herpaderpaldent.github.io/seat-discourse/)
 
@@ -23,6 +24,7 @@ Extendend with custom actions to create groups.
 
 * send `log out` to Discourse when disabling/deleting the user
 * failed login redirect
+* fix token check on login (with settings)
 
 ## Donations
-If you like this SeAT-Plugin i appreciate every ISK donation on IG: Herpaderp Aldent
+If you like this SeAT-Plugin i appreciate every ISK donation on IG: Herpaderp Aldent (orignal author) or IG: Goem Funaila
