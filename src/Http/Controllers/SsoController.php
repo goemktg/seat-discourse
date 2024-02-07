@@ -63,7 +63,7 @@ class SsoController extends Controller
     public function redirect()
     {
         if (! auth()->user()->email) {
-            return redirect()->route('profile.view')->with('error', 'You must enter an email address to use the forum.');
+            return redirect()->route('seatcore::profile.view')->with('error', 'You must enter an email address to use the forum.');
         }
 
         return redirect()->away(env('DISCOURSE_URL'));
@@ -149,7 +149,7 @@ class SsoController extends Controller
     public function login(Request $request, Sync $sync)
     {
         if(! auth()->user()->email){
-            return redirect()->route('profile.view')->with('error', 'You must enter an email address to use the forum.');
+            return redirect()->route('seatcore::profile.view')->with('error', 'You must enter an email address to use the forum.');
         }
 
         //ToDo: Refactoring sync by replacing it with model events
