@@ -22,7 +22,7 @@
         "eveseat/services": "^5.0.2",
         "eveseat/web": "^5.0.4",
         "ext-json": "*",
-        "guzzlehttp/guzzle": "^6.5"
+        "guzzlehttp/guzzle": "^7.2"
     },
     "autoload": {
         "psr-4": {
