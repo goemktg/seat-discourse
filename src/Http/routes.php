@@ -13,15 +13,15 @@ Route::group([
     ], function () {
         Route::get('discourse/sso', [
             'uses' => 'SsoController@login',
-            'as'   => 'sso.login',
+            'as' => 'sso.login',
         ]);
         Route::get('discourse', [
             'uses' => 'SsoController@redirect',
-            'as'   => 'sso.forum',
+            'as' => 'sso.forum',
         ]);
         Route::get('discourse/about', [
             'uses' => 'SeatDiscourseController@getAbout',
-            'as'   => 'seatdiscourse.about',
+            'as' => 'seatdiscourse.about',
         ]);
     });
 });

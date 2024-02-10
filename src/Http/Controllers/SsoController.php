@@ -125,7 +125,7 @@ class SsoController extends Controller
      * The Discourse SSO API does not accept 0 or 1 for false or true.  You must send
      * "false" or "true", so convert any boolean property to the string version.
      *
-     * @param $property
+     * @param  $property
      * @return string
      */
     public function castBooleansToString($property)
@@ -169,7 +169,7 @@ class SsoController extends Controller
 
         $this->user = $request->user();
 
-        if (! ($this->sso->validatePayload($payload = $request->get('sso'), $request->get('sig')))) {
+        if (! $this->sso->validatePayload($payload = $request->get('sso'), $request->get('sig'))) {
             abort(403); //Forbidden
         }
 
