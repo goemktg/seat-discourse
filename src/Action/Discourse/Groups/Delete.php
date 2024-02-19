@@ -23,10 +23,10 @@ class Delete
 
         $client = new Client();
         try {
-            $response = $client->request('DELETE', getenv('DISCOURSE_URL') . '/admin/groups/' . $group_id . '.json', [
+            $response = $client->request('DELETE', config('seatdiscourse.config.url') . '/admin/groups/' . $group_id . '.json', [
                 'headers' => [
-                    'api-key' => getenv('DISCOURSE_API_KEY'),
-                    'api-username' => getenv('DISCOURSE_API_USERNAME'),
+                    'api-key' => config('seatdiscourse.config.api_key'),
+                    'api-username' => config('seatdiscourse.config.api_username'),
                 ],
 
                 'decode_content' => false,

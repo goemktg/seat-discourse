@@ -57,7 +57,7 @@ class SsoController extends Controller
      */
     public function __construct(SSOHelper $sso)
     {
-        $this->sso = $sso->setSecret(getenv('DISCOURSE_SECRET'));
+        $this->sso = $sso->setSecret(config('seatdiscourse.config.connect_secret'));
     }
 
     public function redirect()
@@ -66,7 +66,7 @@ class SsoController extends Controller
             return redirect()->route('seatcore::profile.view')->with('error', 'You must enter an email address to use the forum.');
         }
 
-        return redirect()->away(env('DISCOURSE_URL'));
+        return redirect()->away(config('seatdiscourse.config.url'));
     }
 
     /**
@@ -180,7 +180,7 @@ class SsoController extends Controller
             $this->buildExtraParameters()
         );
 
-        return redirect(str::finish(getenv('DISCOURSE_URL'), '/') . 'session/sso_login?' . $query);
+        return redirect(str::finish(config('seatdiscourse.config.url'), '/') . 'session/sso_login?' . $query);
     }
 
     /**

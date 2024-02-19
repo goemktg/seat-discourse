@@ -25,10 +25,10 @@ class Get
     {
         $client = new Client();
         try {
-            $response = $client->request('GET', getenv('DISCOURSE_URL') . '/groups/search.json', [
+            $response = $client->request('GET', config('seatdiscourse.config.url') . '/groups/search.json', [
                 'headers' => [
-                    'api-key' => getenv('DISCOURSE_API_KEY'),
-                    'api-username' => getenv('DISCOURSE_API_USERNAME'),
+                    'api-key' => config('seatdiscourse.config.api_key'),
+                    'api-username' => config('seatdiscourse.config.api_username'),
                 ],
                 //'debug' => true,
                 'decode_content' => false,

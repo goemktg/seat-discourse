@@ -31,8 +31,8 @@ class SeatDiscourseServiceProvider extends AbstractSeatPlugin
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/config/seatdiscourse.config.php', 'seatdiscourse.config');
-        $this->mergeConfigFrom(__DIR__ . '/config/seatdiscourse.sidebar.php', 'package.sidebar');
+        $this->mergeConfigFrom(__DIR__ . '/Config/seatdiscourse.sidebar.php', 'package.sidebar');
+        $this->mergeConfigFrom(__DIR__ . '/Config/seatdiscourse.config.php', 'seatdiscourse.config');
     }
 
     private function addCommands()
@@ -51,9 +51,7 @@ class SeatDiscourseServiceProvider extends AbstractSeatPlugin
 
     private function addRoutes()
     {
-        if (! $this->app->routesAreCached()) {
-            include __DIR__ . '/Http/routes.php';
-        }
+        $this->loadRoutesFrom(__DIR__ . '/Http/routes.php');
     }
 
     /**
@@ -65,7 +63,7 @@ class SeatDiscourseServiceProvider extends AbstractSeatPlugin
      */
     public function getName(): string
     {
-        return 'SeAT-Discourse';
+        return 'SeAT Discourse';
     }
 
     /**
